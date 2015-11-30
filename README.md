@@ -1,11 +1,12 @@
-## logback 分文件分级别的的测试项目
+# logback 分文件分级别的的测试项目
 
 
-
+## 支持功能
 * 根据`日志级别`区分
 * 根据日志名称**`name`**区分
 * 根据`日志内容`区分
 
+## java代码
 ```java
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -36,7 +37,9 @@ public class ServiceCtrl {
 
 ```
 
-xml配置
+## 对应的xml配置
+> 其中 `return message.contains("service方法");` 这个就是对某个关键字的过滤，可自行修改
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration debug="false">
